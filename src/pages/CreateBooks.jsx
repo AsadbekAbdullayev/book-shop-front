@@ -21,10 +21,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post(
-        "https://book-shop-aw36z4ifh-asadbekabdullayevs-projects.vercel.app/books",
-        data
-      )
+      .post("https://book-shop-swart.vercel.app/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Created successfully", { variant: "success" });

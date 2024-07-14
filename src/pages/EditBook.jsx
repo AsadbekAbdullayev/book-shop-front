@@ -17,9 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        `https://book-shop-aw36z4ifh-asadbekabdullayevs-projects.vercel.app/books/${id}`
-      )
+      .get(`https://book-shop-swart.vercel.app/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -41,10 +39,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(
-        `https://book-shop-aw36z4ifh-asadbekabdullayevs-projects.vercel.app/books/${id}`,
-        data
-      )
+      .put(`https://book-shop-swart.vercel.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited successfully", { variant: "success" });
